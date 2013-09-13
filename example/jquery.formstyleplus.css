@@ -8,6 +8,7 @@ edit or override if you must but I tried to put nothing here
 that restricts you in the user-defined styles section below. 
 
 */
+
 div.fancy_form.select_wrapper {position: relative;display: inline-block;}
 div.fancy_form.select_wrapper > select {position: absolute;top:0;left:0;display: block;box-sizing: border-box;height: 100%;min-width: 100%;opacity: 0;cursor: pointer;z-index: 1;filter: alpha(opacity=0);-webkit-appearance: none;}
 div.fancy_form.select_wrapper > span {float: left;z-index: 0;width: auto;height:auto;overflow: hidden;text-overflow: ellipsis;font-family: inherit;}
