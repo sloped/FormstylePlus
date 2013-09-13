@@ -1,0 +1,108 @@
+/* 
+====================================
+FANCY BIOLERPLATE CONDENSED 
+====================================
+
+all the essentail css for fancy dropdowns, checks, and radios. 
+edit or override if you must but I tried to put nothing here 
+that restricts you in the user-defined styles section below. 
+
+*/
+div.fancy_form.select_wrapper {position: relative;display: inline-block;}
+div.fancy_form.select_wrapper > select {position: absolute;top:0;left:0;display: block;box-sizing: border-box;height: 100%;min-width: 100%;opacity: 0;cursor: pointer;z-index: 1;filter: alpha(opacity=0);-webkit-appearance: none;}
+div.fancy_form.select_wrapper > span {float: left;z-index: 0;width: auto;height:auto;overflow: hidden;text-overflow: ellipsis;font-family: inherit;}
+div.fancy_form.select_wrapper .drop_btn{position: absolute;right:0;top:0;height: 100%;}
+div.fancy_form.select_wrapper .drop_btn span{position:relative;}
+div.fancy_form label{position:relative;cursor: pointer;}
+div.fancy_form input + label:before{position: relative;content:' ';}
+div.fancy_form input[type='checkbox'],div.fancy_form input[type='radio']{position:absolute; left:0; opacity:0; z-index:1; filter: alpha(opacity=0);}
+
+/* 
+====================================
+USER-DEFINED VISUAL STYLES 
+====================================
+
+* * * * SELECTS * * * */
+
+/* this block is the visible wrapper div. make it pretty. the select will fill the whole size of this element*/
+div.fancy_form.select_wrapper {
+	padding:0 10px;	
+	background-color:#F4EA13;
+	height: 40px;
+	min-width: 250px;
+	border-radius: 2px;
+	margin:5px 0;
+}
+/* this is the text that will appear inside the visible div */
+div.fancy_form.select_wrapper > span {
+	color:#71C9BF;
+	margin: 12px 30px 0 0;
+}
+/* this is the div for drop down buttons. if you did not specify a char for use with an icon font, you may want to use a bg image on this element */
+div.fancy_form.select_wrapper .drop_btn {
+	background-color:#71C9BF;
+	top:7px;
+	right:7px;
+	width: 30px;
+	height:26px;
+	border-radius: 2px;
+}
+/* if specified, this is the span inside the dropdown button div with a char in it used with a symbol font */
+div.fancy_form.select_wrapper .drop_btn > span {
+	color:#F4EA13;
+	left:11px;
+	top:3px;
+}
+/* these styles will be applied to the wrapper div around selects that have focus */
+div.fancy_form.select_wrapper.dropdown_input_selected {
+	border-right:10px solid #FFB85E;
+}
+
+/* * * * CHECKS / RADIOS * * * */
+
+/* this is wrapper markup for each inout/label pair */
+div.fancy_form.checkbox_wrapper,
+div.fancy_form.radio_wrapper 
+{
+	margin:8px 0;
+}
+/* if you want to add styles to labels within fancy-wrappers, do it here */
+div.fancy_form label{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+/* - style the ':before' pseudo-element of each label. using the + selector is a way of avoidind javascript while still targetting labels tied to individual inputs. */
+/* this also enables you to use the 'content' declaration for symbol fonts  */
+/* here are the base styles for all of the fancy :befores */
+div.fancy_form input + label:before
+{
+	padding: 1px 6px;
+	margin-right: 6px;
+	color: #F4EA13;
+	border:1px solid #F4EA13;
+	border-radius: 3px;
+}
+/* styles for checkboxes specifically */
+div.fancy_form input[type='checkbox'] + label:before {}
+/* styles for radios specifically */
+div.fancy_form input[type='radio'] + label:before{
+	border-radius: 10px;
+}
+/* - using the :checked pseudo selector is what ties labels to individual inputs and styles them according to your fancy whims - */
+div.fancy_form input:checked + label:before {	
+	background-color: #F4EA13;
+}
+/* fallbacks for ie8 */
+/* if you don't have to worry about ieh8, you can get rid of all the '.checked' selectors below. the checked class is a fallback for ieh8's inability to comprehend the :checked pseudo-selector; */
+div.fancy_form input.checked + label:before {	
+	color:#71C9BF;
+	background: red;
+}
+/* the content property MUST be changed from its previous value to force ie8 to redraw the input markup. and this MUST happen at the BOTTOM of the ruleset AFTER all other rules have taken affect. disgusting. */
+div.fancy_form input[type='checkbox'].checked + label:before{
+	/* put rules above content declaration */
+	content: 'x';
+}
+div.fancy_form input[type='radio'].checked + label:before{
+	content: 'o';
+}

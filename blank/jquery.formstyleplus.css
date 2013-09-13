@@ -1,0 +1,31 @@
+/*====================================
+FANCY BIOLERPLATE CONDENSED 
+====================================*/
+div.fancy_form.select_wrapper {position: relative;display: inline-block;}
+div.fancy_form.select_wrapper > select {position: absolute;top:0;left:0;display: block;box-sizing: border-box;height: 100%;min-width: 100%;opacity: 0;cursor: pointer;z-index: 1;filter: alpha(opacity=0);-webkit-appearance: none;}
+div.fancy_form.select_wrapper > span {float: left;z-index: 0;width: auto;height:auto;overflow: hidden;text-overflow: ellipsis;font-family: inherit;}
+div.fancy_form.select_wrapper .drop_btn{position: absolute;right:0;top:0;height: 100%;}
+div.fancy_form.select_wrapper .drop_btn span{position:relative;}
+div.fancy_form label{position:relative;cursor: pointer;}
+div.fancy_form input + label:before{position: relative;content:' ';}
+div.fancy_form input[type='checkbox'],div.fancy_form input[type='radio']{position:absolute; left:0; opacity:0; z-index:1; filter: alpha(opacity=0);}
+/*====================================
+USER-DEFINED VISUAL STYLES 
+====================================*/
+/* * * * SELECTS * * * */
+div.fancy_form.select_wrapper {}
+div.fancy_form.select_wrapper > span {}
+div.fancy_form.select_wrapper .drop_btn {}
+div.fancy_form.select_wrapper .drop_btn > span {}
+div.fancy_form.select_wrapper.dropdown_input_selected {}
+/* * * * CHECKS / RADIOS * * * */
+div.fancy_form.checkbox_wrapper,div.fancy_form.radio_wrapper {}
+div.fancy_form label{}
+div.fancy_form input + label:before{}
+div.fancy_form input[type='checkbox'] + label:before {}
+div.fancy_form input[type='radio'] + label:before{}
+div.fancy_form input:checked + label:before {}
+/* * * * fallbacks for ie8 * * * */
+div.fancy_form input.checked + label:before {}
+div.fancy_form input[type='radio'].checked + label:before{content: 'o';}
+div.fancy_form input[type='checkbox'].checked + label:before{content: 'x';}

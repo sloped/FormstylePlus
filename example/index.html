@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FormstylePlus Example</title>
+	<style>
+		body{
+			background:#71C9BF;
+			color:#F4EA13;
+			font-family: sans-serif;
+		}
+	</style>
+    <link rel="stylesheet" href="jquery.formstyleplus.css" />
+</head>
+<body>
+<!-- select examples -->
+	favorite sandwich:<br/>
+	<select>
+		<option>meal</option>
+		<option>5</option>
+		<option>brown</option>
+		<option>smort</option>
+		<option>option 1</option>
+	</select>
+	<br/>where were you? <br/>
+	<select>
+		<option>Sometimes</option>
+		<option>idk...</option>
+	</select>
+	<br/>Do you have a nice dog?<br/>
+	<select>
+		<option>Baxter</option>
+		<option>Goodwell</option>
+		<option>Sandy</option>
+		<option>alert("can't alert from here")</option>
+		<option>Dirt</option>
+	</select>
+
+<!-- checkbox examples -->
+	<h3>none, one, both or both?:</h3>
+	<input type="checkbox" value="true" name="checkbox_example" id="checkbox_1a" />
+	<label for="checkbox_1a">one</label>
+	
+	<input type="checkbox" value="true" name="checkbox_example" id="checkbox_1b" />
+	<label for="checkbox_1b">both</label>
+	
+	<!-- this label is out of place but its 'for' attribute will tie it to the input and the plugin will put it in the right place -->
+	<label for="radio_1b">rad man</label>
+	
+<!-- radio examples -->
+	<h3>this or that?:</h3>
+	<input type="radio" value="true" name="radio_group1" id="radio_1a" />
+	<label for="radio_1a">radiation</label>
+	
+	<input type="radio" value="true" name="radio_group1" id="radio_1b" />
+
+	<h3>A choose an option for some reason:</h3>
+	<input type="radio" value="true" name="radio_group2" id="radio_2a" />
+	<label for="radio_2a">radio</label>
+	
+	<input type="radio" value="true" name="radio_group2" id="radio_2b" />
+	<label for="radio_2b">radishes</label>
+
+	<input type="radio" value="true" name="radio_group2" id="radio_2c" />
+	<label for="radio_2c">rad</label>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="jquery.formstyleplus.js"></script>
+<script type="text/javascript">
+
+	// specify any selectors you'd like to fancify, add options if desired.
+	// here we see a single call to fancify_inputs with several selectors, but you can get more specific with multiple calls and more exclusive selectors if you want to supply different arguments for specific elements
+	$('select, input[type=checkbox], input[type=radio]').fancify_inputs( {drop_btn:true, drop_btn_char: 'v'} );
+
+</script>
+</body>
+</html>
