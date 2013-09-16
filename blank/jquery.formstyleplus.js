@@ -17,11 +17,7 @@
 				return this;
 			}
 
-			if(!!settings){
-				for (var prop in settings){
-					if(options.hasOwnProperty(prop)){options[prop] = settings[prop]}
-				}
-			}
+			options = $.extend(options, settings);
 
 			var tagname = this.tagName.toLowerCase(),
 				$el = $(this),
