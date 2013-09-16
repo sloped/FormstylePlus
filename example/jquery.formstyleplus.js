@@ -1,7 +1,4 @@
 (function ($) {
-
-	"use strict";
-
 	var wrapper_class_suffix = "_wrapper",	
 		select_button_class = "drop_btn",
 		options = {
