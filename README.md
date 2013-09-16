@@ -16,8 +16,6 @@ instructions, etc. to come...
 
 + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
 
-please see the 'example' folder for a demo of FormstylePlus, or click the preview link below.
-
-( http://htmlpreview.github.io/?https://github.com/cwcharl/FormstylePlus/blob/master/example/index.html )
+please download the 'example' folder for a demo of FormstylePlus.
 
 the 'blank' folder contains stripped down files, ready to be customized.
